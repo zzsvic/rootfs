@@ -28,8 +28,8 @@ const char* FAST_FUNC printable_string2(uni_stat_t *stats, const char *str)
 		}
 		if (c < ' ')
 			break;
-		if (c >= 0x7f)
-			break;
+		//if (c >= 0x7f)
+		//	break;
 		s++;
 	}
 
@@ -42,8 +42,8 @@ const char* FAST_FUNC printable_string2(uni_stat_t *stats, const char *str)
 			unsigned char c = *d;
 			if (c == '\0')
 				break;
-			if (c < ' ' || c >= 0x7f)
-				*d = '?';
+			//if (c < ' ' || c >= 0x7f)
+			//	*d = '?';
 			d++;
 		}
 		if (stats) {
